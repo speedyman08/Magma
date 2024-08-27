@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefreshFrontend", "RefreshFrontend\RefreshFrontend.csproj", "{A2FCBA88-4BDB-4334-BCB2-69C2EEFA8097}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagmaFE", "MagmaFE\MagmaFE.csproj", "{A2FCBA88-4BDB-4334-BCB2-69C2EEFA8097}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
