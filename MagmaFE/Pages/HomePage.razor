@@ -1,0 +1,28 @@
+﻿@page "/"
+@using RefreshApiClient
+@inject ILocalStorageService TokenStorage
+@inject RefreshClientService RefreshClient
+
+<PageTitle>Home</PageTitle>
+
+<h1>Refresh Website</h1>
+
+<button @onclick="GetStatistics">Get Refresh Stats</button>
+
+@if (_statisticsResponse != null)
+{
+    <p>Total Photos: @_statisticsResponse.Data.TotalPhotos</p>
+}
+else
+{
+    <p>No statistics available.</p>
+}
+
+@code {
+    StatisticsResponse? _statisticsResponse;
+    
+    private async Task GetStatistics() {
+        _statisticsResponse = await RefreshClient.GetStatistics();
+        StateHasChanged();
+    }
+}
