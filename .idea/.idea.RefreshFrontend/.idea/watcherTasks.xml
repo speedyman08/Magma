@@ -2,23 +2,23 @@
 <project version="4">
   <component name="ProjectTasksOptions">
     <TaskOptions isEnabled="true">
-      <option name="arguments" value="--update $FileName$:$ProjectFileDir$\MagmaFE\wwwroot\css\$FileNameWithoutExtension$.css" />
+      <option name="arguments" value="--update $FileName$:$ProjectFileDir$/MagmaFE/wwwroot/css/main.css" />
       <option name="checkSyntaxErrors" value="true" />
       <option name="description" />
       <option name="exitCodeBehavior" value="ERROR" />
       <option name="fileExtension" value="sass" />
       <option name="immediateSync" value="true" />
       <option name="name" value="Sass" />
-      <option name="output" value="$ProjectFileDir$\MagmaFE\wwwroot\css\$FileNameWithoutExtension$.css" />
+      <option name="output" value="$ProjectFileDir$/MagmaFE/wwwroot/css/main.css" />
       <option name="outputFilters">
         <array />
       </option>
       <option name="outputFromStdout" value="false" />
       <option name="program" value="$PROJECT_DIR$/node_modules/.bin/sass" />
       <option name="runOnExternalChanges" value="true" />
-      <option name="scopeName" value="MagmaFE SASS" />
+      <option name="scopeName" value="MagmaFE Main SASS File" />
       <option name="trackOnlyRoot" value="false" />
-      <option name="workingDir" value="$ProjectFileDir$/MagmaFE/wwwroot/sass" />
+      <option name="workingDir" value="$ProjectFileDir$/MagmaFE/Styles" />
       <envs />
     </TaskOptions>
   </component>
