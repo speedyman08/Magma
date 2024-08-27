@@ -11,11 +11,11 @@
 
 @if (_statisticsResponse != null)
 {
-    <p>Total Photos: @_statisticsResponse.Data.TotalPhotos</p>
+    <p>Game Requests: @_statisticsResponse.Data?.RequestStatistics.GameRequests</p>
 }
 else
 {
-    <p>No statistics available.</p>
+    <p>Click the button</p>
 }
 
 @code {

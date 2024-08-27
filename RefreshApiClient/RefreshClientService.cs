@@ -1,6 +1,4 @@
-﻿using System.Text.Json;
-
-namespace RefreshApiClient;
+﻿namespace RefreshApiClient;
 
 public class RefreshClientService
 {
