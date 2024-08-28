@@ -1,12 +1,13 @@
 ﻿@page "/stats"
 @using RefreshApiClient
+@using MagmaFE.Components
 @inject RefreshClientService RefreshClient
 
 <PageTitle>Home</PageTitle>
 
 <h1>Statistics</h1>
 
-<button @onclick="GetStatistics">Get Refresh Stats</button>
+<Button @onclick="GetStatistics">Get Refresh Stats</Button>
 
 @if (_statisticsResponse != null)
 {

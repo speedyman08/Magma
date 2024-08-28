@@ -1,0 +1,16 @@
+﻿@namespace MagmaFE.Components
+
+<button class="outlinedButton" @attributes="AllAttributes">@ChildContent</button>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; init; }
+    
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object>? AllAttributes { get; set; }
+
+    protected override void OnInitialized()
+    {
+        if (ChildContent == null) throw new Exception("Button component is empty");
+    }
+
+}
