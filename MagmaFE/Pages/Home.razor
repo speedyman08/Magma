@@ -1,10 +1,21 @@
 ﻿@page "/"
 @using MagmaFE.Components
+@inject NavigationManager Navigation
 
 <h1>Home Page</h1>
 <p>Welcome to the home page</p>
-<Button>Test button</Button>
+
+<Button @onclick="GoToStatistics">Go to Statistics</Button>
+<Button @onclick="GoToLogin">Login Page</Button>
 
 @code {
-    
+
+    private void GoToStatistics()
+    {
+        Navigation.NavigateTo("/stats");
+    }
+    private void GoToLogin()
+    {
+        Navigation.NavigateTo("/login");
+    }
 }

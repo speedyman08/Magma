@@ -1,10 +1,20 @@
 ﻿@namespace MagmaFE.Components
+@inject NavigationManager Navigation
 
 <h2>Navbar</h2>
 
-<Button>Login</Button>
+<Button @onclick="GoToHome">Home</Button>
+<Button @onclick="GoToLogin">Login</Button>
 <Button>Settings</Button>
 
 @code {
-    
+
+    private void GoToLogin()
+    {
+        Navigation.NavigateTo("/login");
+    }
+    private void GoToHome()
+    {
+        Navigation.NavigateTo("/");
+    }
 }

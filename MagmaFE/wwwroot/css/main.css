@@ -45,4 +45,51 @@ main {
   width: fit-content;
 }
 
+.outlinedButton:hover {
+  cursor: pointer;
+  background: linear-gradient(164deg, rgb(9, 70, 121) 23%, rgb(214, 0, 255) 100%);
+  color: white;
+}
+
+.signIn {
+  border: black solid 3px;
+  width: fit-content;
+  background-color: #ebdcb2;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.signIn h3 {
+  margin: 0 0 5px 0;
+}
+
+.signInInputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.signInSubmitContainer {
+  margin: 5px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.signInValidationContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.formValidationText {
+  color: red;
+  font-size: 12px;
+  margin: 0;
+}
+
 /*# sourceMappingURL=main.css.map */
