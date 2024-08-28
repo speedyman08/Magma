@@ -1,6 +1,12 @@
 ﻿@inherits LayoutComponentBase
-<div>
+@using MagmaFE.Components
+<div class="mainContainer">
     <main>
-        @Body
+        <div class="navBar">
+            <Navbar/>
+        </div>
+        <div class="contentPane">
+            @Body
+        </div>
     </main>
 </div>
