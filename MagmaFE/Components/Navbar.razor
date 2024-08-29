@@ -1,11 +1,14 @@
-﻿@namespace MagmaFE.Components
+﻿@using MagmaFE.Services
+@namespace MagmaFE.Components
 @inject NavigationManager Navigation
+@inject LoadingService LoadingService
 
 <h2>Navbar</h2>
 
 <Button @onclick="GoToHome">Home</Button>
 <Button @onclick="GoToLogin">Login</Button>
 <Button>Settings</Button>
+<LoadingBar IsLoading="LoadingService.IsLoading"></LoadingBar>
 
 @code {
 
@@ -16,5 +19,10 @@
     private void GoToHome()
     {
         Navigation.NavigateTo("/");
+    }
+    
+    protected override void OnInitialized()
+    {
+        LoadingService.OnChange += StateHasChanged;
     }
 }

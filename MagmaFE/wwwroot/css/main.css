@@ -17,8 +17,7 @@ main {
 .navBar {
   width: 170px;
   border-right: 2px solid black;
-  padding-left: 20px;
-  padding-top: 20px;
+  padding: 20px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -39,7 +38,7 @@ main {
   border-radius: 8px;
   box-shadow: none;
   padding: 7px;
-  background-color: #FAD6A5;
+  background-color: #fad6a5;
   font-size: 14px;
   font-weight: bold;
   width: fit-content;
@@ -88,8 +87,31 @@ main {
 
 .formValidationText {
   color: red;
-  font-size: 12px;
+  font-size: 14px;
   margin: 0;
+}
+
+.loadingBarContainer {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.loadingBar {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  animation: loading 0.1s linear infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

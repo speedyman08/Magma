@@ -1,0 +1,17 @@
+﻿.loadingBarContainer
+  width: 100%
+  height: 10px 
+  overflow: hidden  
+  border-radius: 5px  
+
+.loadingBar
+  width: 100%  
+  height: 100%  
+  background-color: black 
+  animation: loading 0.1s linear infinite  
+
+@keyframes loading
+  from
+    transform: translateX(-100%)
+  to
+    transform: translateX(100%)

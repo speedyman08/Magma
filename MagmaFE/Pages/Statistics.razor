@@ -1,7 +1,9 @@
 ﻿@page "/stats"
 @using RefreshApiClient
+@using MagmaFE.Services
 @using MagmaFE.Components
 @inject RefreshClientService RefreshClient
+@inject LoadingService LoadingService
 
 <PageTitle>Home</PageTitle>
 
@@ -11,7 +13,14 @@
 
 @if (_statisticsResponse != null)
 {
-    <p>Game Requests: @_statisticsResponse.Data?.RequestStatistics.GameRequests</p>
+    @foreach (var property in _statisticsResponse.Data.GetType().GetProperties())
+    {
+        var propertyValue = property.GetValue(_statisticsResponse.Data);
+        if (propertyValue != null)
+        {
+            <p>@property.Name: @propertyValue</p>
+        }
+    }
 }
 else
 {
@@ -19,10 +28,16 @@ else
 }
 
 @code {
-    StatisticsResponse? _statisticsResponse;
-    
-    private async Task GetStatistics() {
+    private StatisticsResponse? _statisticsResponse;
+
+    private async Task GetStatistics()
+    {
+        LoadingService.IsLoading = true;
         _statisticsResponse = await RefreshClient.GetStatistics();
+
+
+        LoadingService.IsLoading = false;
         StateHasChanged();
     }
+
 }
